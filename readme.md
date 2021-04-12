@@ -23,7 +23,7 @@ Create 3 routes in the **config/routes.rb** such as:
    
 	get "/get_token_vanilla_pay", to:  "payment#get_token_vanilla_pay" # To get access-token
     post "/init_vanilla_pay", to:  "payment#init_vanilla_pay" # To init payment
-    get "/vanilla_pay_notification", to:  "payment#webhook_for_vanilla_pay_notification" # To recipe vanilla pay notification
+    get "/vanilla_pay_notification", to:  "payment#webhook_for_vanilla_pay_notification" # To receive vanilla pay notification
 
 > **NB:** You choose the name of routes but the important is the routes point to the correct action of the payment controller
 
