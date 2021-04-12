@@ -59,7 +59,7 @@ class PaymentController < ApplicationController
       s.scan(/../).map { |x| x.hex }.pack('c*')
     end
 
-    # FUNCTION TO DECRYPT STRING IN DES3 IN ECB MODE
+    # FUNCTION TO DECRYPT STRING IN DES3 WITH ECB MODE
     def decrypt(key, data)
       # Effectively the same as the `encrypt` method
       cipher = OpenSSL::Cipher::Cipher.new('DES-EDE3')
@@ -72,7 +72,7 @@ class PaymentController < ApplicationController
       output
     end
     
-    # FUNCTION TO ENCRYPT STRING IN DES3 IN ECB MODE
+    # FUNCTION TO ENCRYPT STRING IN DES3 WITH ECB MODE
     def encrypt(key, data)
       cipher = OpenSSL::Cipher::Cipher.new('DES-EDE3')
       cipher.encrypt # Must be called before anything else
